@@ -1,30 +1,39 @@
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTodos, addTodo, removeTodo} from '../redux/todoslice';
 const LiTags=({id,texts ,setLitext})=>{
-  function deleteTask(){
+  const dispatch=useDispatch();
+  // function deleteTask(){
     // const Tasks=document.getElementById('TaskInput');
     // console.log(Tasks.value);
-    setLitext((prev)=>{
-     return prev.filter((value,index)=>index!==id);
-    });
-    console.log(id);
-    // litext.pop(keys);
-  }
+    
+    // setLitext((prev)=>{
+    //  return prev.filter((value,index)=>index!==id);
+    // });
+    // console.log(id);
+    // // litext.pop(keys);
+  // }
   return (
     <div className='li'>
     <li>{texts}</li>
-    <button className='delete' onClick={()=>deleteTask()}>Delete</button>
+    <button className='delete' onClick={()=>dispatch(removeTodo(id))}>Delete</button>
     </div>
   )
 }
 const Todo = () => {
-  const [litext,setLitext]=useState([]);
+  const dispatch = useDispatch();
+  const todoslist = useSelector(state => state.todos.list);
+  // const [litext,setLitext]=useState([]);
   const [Task,setTask]=useState("");
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
   function pushText(){
     // const Tasks=document.getElementById('TaskInput'); //this is mostly done in javascript but in react we have to use usestate so that consitency maintain and easy to manipulate
     // console.log(Tasks.value);
-    setLitext((prev)=>([...prev,Task]));
-    setTask("");
+    // setLitext((prev)=>([...prev,Task]));
+    // setTask("");
+    dispatch(addTodo(Task));
   }
   return (
     <div className='main' >
@@ -37,8 +46,8 @@ const Todo = () => {
       </div>
       <ul id='listOfTasks'>
       {
-        litext.map((text,index)=>{
-          return <LiTags key={index} id={index} texts={text} setLitext={setLitext}/> 
+        todoslist.map((text,index)=>{
+          return <LiTags key={index} id={text.id} texts={text.todo} />
         })
       }
       </ul>
