@@ -34,12 +34,16 @@ ul{
 }
 li{
   border-style: groove;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   background:white;
   align-items: center;
   margin: .25rem 0;
   padding: .5rem;
+}
+.li{
+  display: flex;
 }
 .delete {
   background: red;
