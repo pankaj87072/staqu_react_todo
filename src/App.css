@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+html{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height:100vh; /*why always stuck in this when used always scroll bar appear so used vh vw but didnot understand*/
+  /* width: 100%; */
+  background-image: url('asset/premium_photo-1683309568772-57011d6c1b7b.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main{
+  font-family: Arial, sans-serif;
+  max-width: 25rem;
+  margin:auto;
+  text-align:center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  margin: .25rem;
+  padding: .5rem;
+}
+button{
+  margin:.25rem;
+  padding:.5rem;
+  background-color: blue;
+  color:white;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+li{
+  border-style: groove;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  background:white;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: .25rem 0;
+  padding: .5rem;
+}
+.delete {
+  background: red;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  cursor: pointer;
 }
