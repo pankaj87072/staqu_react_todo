@@ -32,8 +32,9 @@ const Todo = () => {
     // const Tasks=document.getElementById('TaskInput'); //this is mostly done in javascript but in react we have to use usestate so that consitency maintain and easy to manipulate
     // console.log(Tasks.value);
     // setLitext((prev)=>([...prev,Task]));
-    // setTask("");
+    
     dispatch(addTodo(Task));
+    setTask("");
   }
   return (
     <div className='main' >
@@ -46,8 +47,8 @@ const Todo = () => {
       </div>
       <ul id='listOfTasks'>
       {
-        todoslist.map((text,index)=>{
-          return <LiTags key={index} id={text.id} texts={text.todo} />
+        todoslist.map((e)=>{
+          return <LiTags key={e.id} id={e.id} texts={e.todo} />
         })
       }
       </ul>

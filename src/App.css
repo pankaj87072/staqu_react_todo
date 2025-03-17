@@ -5,7 +5,7 @@ html{
   height: 100%;
 }
 body {
-  height:100vh; /*why always stuck in this when used always scroll bar appear so used vh vw but didnot understand*/
+  height:fit-content; /*why always stuck in this when used always scroll bar appear so used vh vw but didnot understand*/
   /* width: 100%; */
   background-image: url('asset/premium_photo-1683309568772-57011d6c1b7b.jpeg');
   background-position: center;
