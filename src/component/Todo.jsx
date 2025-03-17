@@ -38,7 +38,8 @@ const Todo = () => {
   }
   return (
     <div className='main' >
-      <h2>Todo WebApp</h2>
+      <div className='card'>
+      <h2 className='title'>Todo WebApp</h2>
       <div className='inputs'>
       <input type='text' id='TaskInput' value={Task} placeholder='Enter The Task' onChange={(e)=>setTask(e.target.value)}/>
       <button onClick={()=>{
@@ -52,6 +53,7 @@ const Todo = () => {
         })
       }
       </ul>
+      </div>
     </div>
   )
 }

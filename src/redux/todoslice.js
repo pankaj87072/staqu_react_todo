@@ -9,13 +9,14 @@ export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
     const response = await fetch('https://dummyjson.com/todos/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ todo: todoText, completed: false, userId: 1 }),
+      body: JSON.stringify({ todo: todoText, completed: false, userId: Date.now().toLocaleString() }),
     });
     const data = await response.json();
-    return data; // Return new task added from API
+    return {...data,id: Date.now()}; 
   });
   export const removeTodo = createAsyncThunk('todos/removeTodo', async (id) => {
     await fetch(`https://dummyjson.com/todos/${id}`);
+    console.log(id);
     return id; 
   });
 
