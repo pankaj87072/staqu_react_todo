@@ -227,8 +227,16 @@
         <mxCell id="dem2RPdDAouoTO7_FDhB-4" value="BackgroundProcess.js" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="2102" y="-145" width="140" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="dem2RPdDAouoTO7_FDhB-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dem2RPdDAouoTO7_FDhB-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2256.9999999999995" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dem2RPdDAouoTO7_FDhB-5" value="RUN PROCESS&amp;nbsp;&lt;span style=&quot;color: rgb(220, 220, 170); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;createDvrRecordingJson()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(220, 220, 170); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;TO CREATE DVR RECORDING&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="2114" y="-60" width="286" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dem2RPdDAouoTO7_FDhB-8" value="CREARTE AND UPDAT LOGS UNCITONS TO&amp;nbsp;&lt;br&gt;CREATE LOGS ON RECORDIG LIKE TIMING FROM WHEN TO WHEN&amp;nbsp;&lt;br&gt;LOGS DETAILS,CAMERA DETAILS&lt;br&gt;AND STORE IT IN LOCAL FILESL." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="2114" y="132" width="286" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
