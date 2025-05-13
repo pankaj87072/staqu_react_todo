@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="startBackgroundProcess Flow" id="startBackgroundProcessFlow">
+    <mxGraphModel dx="1538" dy="895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Start Background Process" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;container=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="log" value="Log: Start background process" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="checkService" value="Is Windows Service Installed?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="180" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceBranch" value="Check service installed: jarvisstreamingagent.exe" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="startService" value="If installed: Start service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="installService" value="If not installed: Install &amp;&amp; Start service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" value="End (Service Mode)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="580" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nonService" value="Generate DVR inputs.json" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="300" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="startDVR" value="Call createDvrRecordingJson()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="380" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="checkLive" value="Are any live cameras available?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="460" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="startLive" value="Start each live stream with delay" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="560" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" value="End (Local Mode)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="690" y="640" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="start" target="log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="log" target="checkService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="checkService" target="serviceBranch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="serviceBranch" target="startService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="startService" target="installService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="installService" target="end1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="checkService" target="nonService">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="nonService" target="startDVR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="startDVR" target="checkLive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="checkLive" target="startLive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="startLive" target="end2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="checkLive" target="end2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
