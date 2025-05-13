@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.3" pages="2">
   <diagram id="mqHwGI_LqDd8mVgrgTSP" name="Page-5">
     <mxGraphModel dx="3386" dy="3009" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -237,6 +237,90 @@
         </mxCell>
         <mxCell id="dem2RPdDAouoTO7_FDhB-8" value="CREATE AND UPDATE LOGS FUNCTIONS TO&amp;nbsp;&lt;br&gt;CREATE LOGS ON RECORDING LIKE TIMING FROM WHEN TO WHEN&amp;nbsp;&lt;br&gt;LOGS DETAILS,CAMERA DETAILS&lt;br&gt;AND STORE IT IN LOCAL FILES." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="2114" y="132" width="286" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="y7C7kz-pdiSo9Fz-IUn-" name="Page-2">
+    <mxGraphModel dx="1481" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HcEsHy9kv8bSsj293TNe-1" value="Start Background Process" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;container=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-2" value="Log: Start background process" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-3" value="Is Windows Service Installed?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="200" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-4" value="Check service installed: jarvisstreamingagent.exe" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-5" value="If installed: Start service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-6" value="If not installed: Install &amp;&amp; Start service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-7" value="End (Service Mode)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="600" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-8" value="Generate DVR inputs.json" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-9" value="Call createDvrRecordingJson()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-10" value="Are any live cameras available?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="480" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-11" value="Start each live stream with delay" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="580" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-12" value="End (Local Mode)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="690" y="660" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-1" target="HcEsHy9kv8bSsj293TNe-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-2" target="HcEsHy9kv8bSsj293TNe-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-15" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-3" target="HcEsHy9kv8bSsj293TNe-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-4" target="HcEsHy9kv8bSsj293TNe-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-5" target="HcEsHy9kv8bSsj293TNe-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-6" target="HcEsHy9kv8bSsj293TNe-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-19" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-3" target="HcEsHy9kv8bSsj293TNe-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-8" target="HcEsHy9kv8bSsj293TNe-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-9" target="HcEsHy9kv8bSsj293TNe-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-22" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-10" target="HcEsHy9kv8bSsj293TNe-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-11" target="HcEsHy9kv8bSsj293TNe-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HcEsHy9kv8bSsj293TNe-24" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="HcEsHy9kv8bSsj293TNe-10" target="HcEsHy9kv8bSsj293TNe-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="660" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
