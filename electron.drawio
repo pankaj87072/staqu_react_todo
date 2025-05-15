@@ -212,13 +212,16 @@
           <mxGeometry x="2114" y="-60" width="286" height="90" as="geometry" />
         </mxCell>
         <mxCell id="dem2RPdDAouoTO7_FDhB-8" value="CREATE AND UPDATE LOGS FUNCTIONS TO&amp;nbsp;&lt;br&gt;CREATE LOGS ON RECORDING LIKE TIMING FROM WHEN TO WHEN&amp;nbsp;&lt;br&gt;LOGS DETAILS,CAMERA DETAILS&lt;br&gt;AND STORE IT IN LOCAL FILES." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="2114" y="132" width="286" height="90" as="geometry" />
+          <mxGeometry x="2114" y="120" width="286" height="90" as="geometry" />
         </mxCell>
         <mxCell id="k8dw4evraH63UHTFpNYn-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.075;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="732" y="845" as="sourcePoint" />
             <mxPoint x="932" y="845" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="k8dw4evraH63UHTFpNYn-6" value="DeviceConfig--&amp;gt;testConectivity--&amp;gt;generateSnapshot" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="2170" y="275" width="286" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
